@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {CurrencyService} from "./CurrencyService";
 import {HttpClient} from "@angular/common/http";
 
 @Component({
@@ -12,14 +11,14 @@ export class CurrencyComponent {
   eurRate: number | undefined;
   apiData: any;
 
-  constructor(private currencyService: CurrencyService, private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.getData();
   }
 
   getData() {
-    const apiUrl = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchangenew?json'; // Замените на фактическую ссылку на ваше API
+    const apiUrl = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchangenew?json';
 
     this.http.get(apiUrl).subscribe(data => {
       this.apiData = data;
