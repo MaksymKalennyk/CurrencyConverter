@@ -24,18 +24,9 @@
         <div class="form-group">
           <label for="currencyFrom">Валюта</label>
           <select class="form-control text-center" id="currencyFrom" [(ngModel)]="currencyFrom" (ngModelChange)="convertCurrencySecond()">
-            <option class="optionUsa">
-              <i class="fa-light fa-flag-usa"></i>
-              {{currencyUSD}}
-            </option>
-            <option>
-              <img src="../../assets/flags/Ukraine.png" alt="UAH" width="20" height="20">
-              {{currencyUAH}}
-            </option>
-            <option>
-              <img src="../../assets/flags/Europe.png" alt="EUR" width="20" height="20">
-              {{currencyEUR}}
-            </option>
+            <option>{{currencyUSD}}</option>
+            <option>{{currencyUAH}}</option>
+            <option>{{currencyEUR}}</option>
           </select>
         </div>
         <div class="form-group mt-4">
@@ -47,18 +38,9 @@
         <div class="form-group">
           <label for="currencyTo">Валюта</label>
           <select class="form-control text-center" id="currencyTo" [(ngModel)]="currencyTo" (ngModelChange)="convertCurrencyFirst()">
-            <option>
-              <img src="../../assets/flags/Usa.png" alt="USD" width="20" height="20">
-              {{currencyUSD}}
-            </option>
-            <option>
-              <img src="../../assets/flags/Ukraine.png" alt="UAH" width="20" height="20">
-              {{currencyUAH}}
-            </option>
-            <option>
-              <img src="../../assets/flags/Europe.png" alt="EUR" width="20" height="20">
-              {{currencyEUR}}
-            </option>
+            <option>{{currencyUSD}}</option>
+            <option>{{currencyUAH}}</option>
+            <option>{{currencyEUR}}</option>
           </select>
         </div>
         <div class="form-group mt-4">
