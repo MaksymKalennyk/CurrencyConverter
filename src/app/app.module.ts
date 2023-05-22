@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import {RouterModule, Routes} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import { CurrencyComponent } from './currency/currency.component';
+import {FormsModule} from "@angular/forms";
+import { OnlyNumberDirective } from './only-number.directive';
 
 
 const routes: Routes = [
@@ -14,13 +16,15 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    CurrencyComponent
+    CurrencyComponent,
+    OnlyNumberDirective
   ],
   imports: [
     BrowserModule,
     RouterModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
