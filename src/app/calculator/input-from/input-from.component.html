@@ -1,0 +1,4 @@
+<div class="form-group mt-4">
+  <label for="inputFrom">Введіть кількість грошей</label>
+  <input type="text" class="form-control text-center" id="inputFrom" [(ngModel)]="calculator.inputFrom" (ngModelChange)="calculatorService.convertCurrencyTo(calculator)" appOnlyNumber>
+</div>

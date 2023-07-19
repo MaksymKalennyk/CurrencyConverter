@@ -1,0 +1,6 @@
+<div class="form-group">
+  <label for="currencyTo">Валюта</label>
+  <select class="form-control text-center" id="currencyTo" [(ngModel)]="calculator.currencyTo" (ngModelChange)="calculatorService.selectTo(calculator)">
+    <option *ngFor="let item of selectItems">{{item}}</option>
+  </select>
+</div>
